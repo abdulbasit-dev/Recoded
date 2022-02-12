@@ -1,0 +1,152 @@
+/* List three ways to select html elements in css */
+/* 
+  We can select html elements as follow
+  1- Simple selectors (select elements based on name, id, class).
+  2- Combinator selectors (select elements based on a specific relationship between them).
+  3- Pseudo-class selectors (select elements based on a certain state).
+*/
+
+/* Added */
+* {
+  margin: 0px;
+}
+
+body {
+  background-color: #eee;
+  font-family: 'Karla', sans-serif;
+}
+
+header {
+  background: url('https://drive.google.com/uc?id=1ADdMAd8sSM1GxabjRUpJaqliyYQMxixu');
+  background-size: cover;
+  background-position: center;
+  color: #ccc;
+  display: flex;
+  /* What does 'display: flex' do?*/
+  /* A flex container expands items to fill available free space or shrinks them to prevent overflow */
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  margin: 40px;
+  border-radius: 50%;
+}
+
+.title {
+  margin: 40px;
+  padding: 15px;
+  border: 5px solid #ccc;
+  border-radius: 15px;
+}
+
+.italic {
+  margin: 40px;
+  font-size: 24px;
+  /* px, percentage, and em, units are 3 measurements units in CSS */
+  font-style: italic;
+  /* Added */
+  text-align: center;
+}
+
+.bootcamp {
+  padding: 20px;
+}
+
+.align-right {
+  text-align: right;
+}
+
+/* Added */
+ul {
+  padding: 0px;
+}
+.bootcamp p,
+li {
+  margin: 10px;
+}
+
+#awesome {
+  display: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  /* Added */
+  padding: 20px;
+}
+
+#searchBox {
+  margin: 0 auto;
+  display: inline-block;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+  border-color: #dda65f;
+}
+
+#searchBox::selection {
+  border-color: #3a7ddd;
+}
+
+#infoBtn,
+#searchBtn,
+#awesomeBtn {
+  background-color: #dda65f;
+  /* add border color to match the background color */
+  border-color: #dda65f;
+  color: white;
+  margin: 0 auto;
+  display: inline-block;
+  font-size: 16px;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+/* Make the mouse curser look like a hand when you hover over the buttons (#infoBtn, #searchBtn, #awesomeBtn) and add backgound and border color of #3a7ddd*/
+
+#infoBtn:hover,
+#searchBtn:hover,
+#awesomeBtn:hover {
+  background-color: #3a7ddd;
+  border-color: #3a7ddd;
+  cursor: pointer;
+}
+.socialIcon {
+  width: 25px;
+  margin: 0px 10px;
+}
+
+/* multiple way to make the buttons display in an inline as follow */
+.buttons {
+  display: flex;
+  text-align: center;
+  flex-flow: row-reverse;
+  justify-content: space-around;
+  padding: 20px 0px;
+}
+
+.buttons > div {
+  flex: 1;
+}
+
+/* grid way  */
+/* .buttons {
+  padding: 50px 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  text-align: center;
+}
+.infoDiv {
+  order: 3;
+}
+.awesomeDiv {
+  order: 1;
+}
+.searchDiv {
+  order: 0;
+} */
